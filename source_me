@@ -1,0 +1,6 @@
+# sources all of the files needed to run Dane's bash functions
+DIR=$( dirname $0 )
+BASE_PATH=$(pwd)
+source $DIR/bash_functions
+source $DIR/bash_aliases
+source $DIR/bash_other
