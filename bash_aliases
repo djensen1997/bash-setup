@@ -1,2 +1,2 @@
 alias la="ls -la"
-alias pr="hub pull-request"
+alias pr="hub pull-request $@"

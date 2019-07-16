@@ -10,6 +10,19 @@ function gpa () {
 	git add -A && git commit -m $1 && git push
 }
 
+function run_jaeger () {
+    docker run -d --name jaeger \
+        -e COLLECTOR_ZIPKIN_HTTP_PORT=9411 \
+        -p 5775:5775/udp \
+        -p 6831:6831/udp \
+        -p 6832:6832/udp \
+        -p 5778:5778 \
+        -p 16686:16686 \
+        -p 14268:14268 \
+        -p 9411:9411 \
+        jaegertracing/all-in-one:1.9
+}
+
 # creates an alias in the current directory and then sources it
 # Adapted from aliasHere by Anthony Forsythe
 ALIASES_FILE=$HOME/.aliases.sh
