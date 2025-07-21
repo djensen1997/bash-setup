@@ -14,6 +14,6 @@ echo "FILE $FILE"
 echo "PROFILE $PROFILE"
 
 echo "Adding RC to the bash profile"
-echo "\n#Dane's Bash Functions" >> $HOME/$PROFILE
+echo "#Dane's Bash Functions" >> $HOME/$PROFILE
 echo "source $FILE" >> $HOME/$PROFILE
 echo "Done with setup, restart bash to get functionality"
